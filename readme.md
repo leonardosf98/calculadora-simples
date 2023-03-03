@@ -3,3 +3,5 @@
 > Em desenvolvimento!
 
 Calculadora simples desenvolvida com JavaScript, HTML e CSS
+
+Desenvolvido por Leonardo Souza
