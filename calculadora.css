@@ -1,0 +1,134 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container__principal {
+    width: 400px;
+    height: 600px;
+    box-sizing: content-box;
+    border: 2px solid rgba(0, 0, 0, 0.418);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+
+}
+
+.input {
+    margin-top: 30px;
+    align-items: center;
+}
+
+#input__calculadora {
+    width: 300px;
+    height: 40px;
+}
+
+.operadores {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    user-select: none;
+}
+
+.operadores div {
+    height: 20px;
+    width: 30px;
+    background-color: gray;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.445);
+    padding: 20px;
+    font-size: 50px;
+}
+
+.painel__principal {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+    user-select: none;
+}
+
+.painel__numeros {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.primeira__fileira {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.primeira__fileira div {
+    background-color: aqua;
+    height: 40px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.445);
+}
+
+.segunda__fileira {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.segunda__fileira div {
+    background-color: aqua;
+    height: 40px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.445);
+
+}
+
+.terceira__fileira {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.terceira__fileira div {
+    background-color: aqua;
+    height: 40px;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.445);
+
+}
+
+.ultima__fileira {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.ultima__fileira div {
+    background-color: aqua;
+    height: 40px;
+    width: 60px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.445);
+}
+
+.botao__igual {
+    height: 113px;
+    width: 60px;
+    background-color: rgb(40, 128, 211);
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.445);
+    text-align: center;
+    padding-top: 112px;
+}
