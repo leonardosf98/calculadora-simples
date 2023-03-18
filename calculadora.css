@@ -28,22 +28,23 @@ body {
     height: 40px;
 }
 
-.operadores {
+.operadores__container {
     display: flex;
     flex-direction: row;
     gap: 20px;
     user-select: none;
 }
 
-.operadores div {
-    height: 20px;
-    width: 30px;
+.operadores {
+    height: 70px;
+    width: 60px;
     background-color: gray;
     cursor: pointer;
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.445);
-    padding: 20px;
+    padding: 0px;
     font-size: 50px;
+    align-content: center;
 }
 
 .painel__principal {
