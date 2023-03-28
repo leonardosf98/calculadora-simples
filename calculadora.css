@@ -1,9 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&family=PT+Mono&display=swap');
+
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgb(2, 0, 36);
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Karla, sans-serif;
+    /* adiciona box-sizing: border-box; */
+}
+
+header {
+    background-color: white;
+    width: 100vw;
+    text-align: center;
+    height: 100px;
+}
+
+main {
+    margin-top: 4%;
 }
 
 .container__principal {
@@ -15,7 +37,7 @@ body {
     flex-direction: column;
     gap: 50px;
     align-items: center;
-
+    background-color: white;
 }
 
 .input {
@@ -45,6 +67,9 @@ body {
     padding: 0px;
     font-size: 50px;
     align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .painel__principal {
@@ -62,74 +87,51 @@ body {
 
 }
 
-.primeira__fileira {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.primeira__fileira div {
-    background-color: aqua;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.445);
-}
-
-.segunda__fileira {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.segunda__fileira div {
-    background-color: aqua;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.445);
-
-}
-
-.terceira__fileira {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.terceira__fileira div {
-    background-color: aqua;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.445);
-
-}
-
+.primeira__fileira,
+.segunda__fileira,
+.terceira__fileira,
 .ultima__fileira {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
+.primeira__fileira div,
+.segunda__fileira div,
+.terceira__fileira div,
 .ultima__fileira div {
-    background-color: aqua;
+    background-color: #62A1DB;
     height: 40px;
     width: 60px;
     cursor: pointer;
-    text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.445);
+    display: flex;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
 }
 
 .botao__igual {
     height: 113px;
     width: 60px;
-    background-color: rgb(40, 128, 211);
+    background-color: #5DD469;
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.445);
     text-align: center;
     padding-top: 112px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    background-color: rgba(124, 123, 123, 0.471);
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
 }

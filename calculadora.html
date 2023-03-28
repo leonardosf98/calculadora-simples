@@ -9,47 +9,53 @@
     <link rel="stylesheet" href="calculadora.css">
 </head>
 
-<body>
 
-    <div class="container__principal">
-        <div class="input">
-            <input type="text" name="" id="input__calculadora">
-        </div>
-        <div class="operadores__container">
-            <div class="operadores" value="+">+</div>
-            <div class="operadores" value="-">-</div>
-            <div class="operadores" value="*">*</div>
-            <div class="operadores" value="/">/</div>
-        </div>
-        <div class="painel__principal">
-            <div class="painel__numeros">
-                <div class="primeira__fileira">
-                    <div class="tecla">7</div>
-                    <div class="tecla">8</div>
-                    <div class="tecla">9</div>
+<body>
+    <header>
+        <h1>Calculadora em HTML, CSS e JS</h1>
+    </header>
+    <main>
+        <div class="container__principal">
+            <div class="input">
+                <input type="text" name="" id="input__calculadora" pattern="^[0-9+\-*/^()\s]+$">
+            </div>
+            <div class="operadores__container">
+                <div class="operadores" value="+">+</div>
+                <div class="operadores" value="-">-</div>
+                <div class="operadores" value="*">*</div>
+                <div class="operadores" value="/">/</div>
+            </div>
+            <div class="painel__principal">
+                <div class="painel__numeros">
+                    <div class="primeira__fileira">
+                        <div class="tecla">7</div>
+                        <div class="tecla">8</div>
+                        <div class="tecla">9</div>
+                    </div>
+                    <div class="segunda__fileira">
+                        <div class="tecla">4</div>
+                        <div class="tecla">5</div>
+                        <div class="tecla">6</div>
+                    </div>
+                    <div class="terceira__fileira">
+                        <div class="tecla">1</div>
+                        <div class="tecla">2</div>
+                        <div class="tecla">3</div>
+                    </div>
+                    <div class="ultima__fileira">
+                        <div class="tecla">0</div>
+                        <div class="tecla">.</div>
+                        <div class="erase">C</div>
+                    </div>
                 </div>
-                <div class="segunda__fileira">
-                    <div class="tecla">4</div>
-                    <div class="tecla">5</div>
-                    <div class="tecla">6</div>
-                </div>
-                <div class="terceira__fileira">
-                    <div class="tecla">1</div>
-                    <div class="tecla">2</div>
-                    <div class="tecla">3</div>
-                </div>
-                <div class="ultima__fileira">
-                    <div class="tecla">0</div>
-                    <div class="tecla">.</div>
-                    <div class="erase">C</div>
+                <div class="container__botao__igual">
+                    <div class="botao__igual">=</div>
                 </div>
             </div>
-            <div class="container__botao__igual">
-                <div class="botao__igual">=</div>
-            </div>
         </div>
-    </div>
+    </main>
     <script src="calculadora.js"></script>
 </body>
+
 
 </html>
