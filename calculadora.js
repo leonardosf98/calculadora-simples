@@ -2,32 +2,45 @@ let numero1;
 let numero2;
 let operador;
 
-//Função para teclas numéricas
-let teclas = document.querySelectorAll(".tecla");
-
+//Lista DOM
+const teclas = document.querySelectorAll(".tecla");
+const igual = document.querySelector(".botao__igual");
+const erase = document.querySelector(".erase");
 const input = document.getElementById("input__calculadora");
+const operadores = document.querySelectorAll(".operadores");
+const ponto = document.querySelector(".ponto");
 
-input.addEventListener("input", function () {
-  const regex = /^[^\.]*\.[^\.]*$/; // expressão regular que permite apenas um ponto
-  if (!regex.test(this.value)) {
-    this.value = this.value.slice(0, -1); // remove o último caractere (ponto) digitado
+//Lista de eventos
+erase.addEventListener("click", deletar);
+input.addEventListener("keypress", somenteNumeros);
+input.addEventListener("input", limitaPontos);
+igual.addEventListener("click", resultado);
+ponto.addEventListener("click", limitaPontos);
+
+function somenteNumeros(e) {
+  if (isNaN(parseInt(e.key))) {
+    e.preventDefault();
   }
-});
+}
+function limitaPontos() {
+  const value = input.value.replace(/^\d*\.?\d*$/g, " ");
+  input.value = value;
+}
+
 teclas.forEach(function (tecla) {
   tecla.onmousedown = function () {
     input__calculadora.value += tecla.textContent;
   };
 });
 //Função para apagar visor
-let erase = document.querySelector(".erase");
-erase.addEventListener("click", deletar);
 
 function deletar() {
   document.getElementById("input__calculadora").value = "";
   numero1 = "";
 }
+
 //Função para operadores matemáticos e armazenamento de valor
-let operadores = document.querySelectorAll(".operadores");
+
 operadores.forEach(function (sinais) {
   sinais.onmousedown = function () {
     numero1 = input__calculadora.value * 1;
@@ -35,10 +48,6 @@ operadores.forEach(function (sinais) {
     operador = sinais.innerHTML;
   };
 });
-
-let igual = document.querySelector(".botao__igual");
-
-igual.addEventListener("click", resultado);
 
 function resultado() {
   if (operador == "/") {
@@ -63,10 +72,3 @@ function resultado() {
     console.log(numero1, numero2);
   }
 }
-
-/* Colocar números no clique
-Armazenar valores
-aplicar operador matemático
-limpar visor
-
-*/

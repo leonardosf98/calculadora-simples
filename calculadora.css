@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&family=PT+Mono&display=swap');
 
-body {
+* {
+    box-sizing: border-box;
+}
+
+.pagina {
     width: 100%;
     height: 100%;
     display: flex;
@@ -12,23 +16,22 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin: 0;
-    box-sizing: border-box;
     font-family: Karla, sans-serif;
     /* adiciona box-sizing: border-box; */
 }
 
-header {
+.cabecalho {
     background-color: white;
     width: 100vw;
     text-align: center;
     height: 100px;
 }
 
-main {
+.container {
     margin-top: 4%;
 }
 
-.container__principal {
+.container__calculadora {
     width: 400px;
     height: 600px;
     box-sizing: content-box;
@@ -40,17 +43,20 @@ main {
     background-color: white;
 }
 
-.input {
+.container__input {
     margin-top: 30px;
     align-items: center;
+    outline: 0px;
 }
 
 #input__calculadora {
     width: 300px;
-    height: 40px;
+    height: 60px;
+    border: 0px;
+    font-size: 2.5em;
 }
 
-.operadores__container {
+.container__operadores {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -63,7 +69,7 @@ main {
     background-color: gray;
     cursor: pointer;
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.445);
+    border: 0px;
     padding: 0px;
     font-size: 50px;
     align-content: center;
@@ -72,12 +78,51 @@ main {
     justify-content: center;
 }
 
-.painel__principal {
-    display: flex;
+.operadores:hover {
+    background-color: rgb(181, 181, 181);
+}
+
+.operadores:active {
+    background-color: rgb(77, 76, 76);
+}
+
+.subtracao {
+    padding-bottom: 10px;
+}
+
+.multiplicacao {
+    padding-top: 20px;
+}
+
+.container__numeros {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
     flex-direction: row;
     gap: 20px;
     user-select: none;
+}
+
+.tecla {
+    background-color: #62A1DB;
+    height: 4em;
+    width: 6.5em;
+    cursor: pointer;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.tecla:hover {
+    background-color: #71baff;
+}
+
+.tecla:active {
+    background-color: #426e96;
 }
 
 .painel__numeros {
@@ -87,40 +132,18 @@ main {
 
 }
 
-.primeira__fileira,
-.segunda__fileira,
-.terceira__fileira,
-.ultima__fileira {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.primeira__fileira div,
-.segunda__fileira div,
-.terceira__fileira div,
-.ultima__fileira div {
-    background-color: #62A1DB;
-    height: 40px;
-    width: 60px;
-    cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.445);
-    display: flex;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-}
-
-.botao__igual {
-    height: 113px;
-    width: 60px;
+.igual {
     background-color: #5DD469;
-    cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.445);
+    border: 0px;
     text-align: center;
-    padding-top: 112px;
+}
+
+.igual:hover {
+    background-color: #6ffb7d
+}
+
+.igual:active {
+    background-color: #3a8541
 }
 
 input::-webkit-outer-spin-button,
