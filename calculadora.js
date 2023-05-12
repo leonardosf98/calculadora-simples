@@ -3,33 +3,28 @@ let numero2;
 let operador;
 
 //Lista DOM
-const teclas = document.querySelectorAll(".tecla");
-const igual = document.querySelector(".botao__igual");
-const erase = document.querySelector(".erase");
-const input = document.getElementById("input__calculadora");
+const numeros = document.querySelectorAll(".numero");
+const igual = document.querySelector(".igual");
+const apagar = document.querySelector(".apagar");
+const input = document.querySelector("#input__calculadora");
 const operadores = document.querySelectorAll(".operadores");
 const ponto = document.querySelector(".ponto");
 
 //Lista de eventos
-erase.addEventListener("click", deletar);
-input.addEventListener("keypress", somenteNumeros);
-input.addEventListener("input", limitaPontos);
+apagar.addEventListener("click", deletar);
 igual.addEventListener("click", resultado);
-ponto.addEventListener("click", limitaPontos);
+input.addEventListener("keypress", somenteNumeros);
 
-function somenteNumeros(e) {
-  if (isNaN(parseInt(e.key))) {
-    e.preventDefault();
+//Função para receber somente números no input
+function somenteNumeros(evento) {
+  if (isNaN(parseInt(evento.key))) {
+    evento.preventDefault();
   }
 }
-function limitaPontos() {
-  const value = input.value.replace(/^\d*\.?\d*$/g, " ");
-  input.value = value;
-}
-
-teclas.forEach(function (tecla) {
-  tecla.onmousedown = function () {
-    input__calculadora.value += tecla.textContent;
+//Função para adicionar número ao clicar
+numeros.forEach(function (numero) {
+  numero.onmousedown = function () {
+    input__calculadora.value += numero.textContent;
   };
 });
 //Função para apagar visor
@@ -52,7 +47,7 @@ operadores.forEach(function (sinais) {
 function resultado() {
   if (operador == "/") {
     numero2 = input__calculadora.value * 1;
-    resultado = numero1 / numero2;
+    resultado = Math.round(numero1 / numero2);
     input__calculadora.value = resultado;
     console.log(numero1, numero2);
   } else if (operador == "*") {
