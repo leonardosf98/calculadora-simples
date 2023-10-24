@@ -1,165 +1,168 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&family=PT+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@300&family=PT+Mono&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .pagina {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgb(2, 0, 36);
-    background: rgb(63, 94, 251);
-    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(0, 212, 255, 1) 100%);
-    flex-direction: column;
-    overflow: hidden;
-    margin: 0;
-    font-family: Karla, sans-serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(2, 0, 36);
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0;
+  font-family: Karla, sans-serif;
 }
 
 .cabecalho {
-    background-color: white;
-    width: 100vw;
-    text-align: center;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
+  background-color: white;
+  width: 100vw;
+  text-align: center;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
 }
 
 .container__paragrafo {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .container {
-    margin-top: 4%;
+  margin-top: 4%;
 }
 
 .container__calculadora {
-    width: 400px;
-    height: 600px;
-    box-sizing: content-box;
-    border: 2px solid rgba(0, 0, 0, 0.418);
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    background-color: white;
-    justify-content: center;
+  width: 400px;
+  height: 600px;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.418);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
 }
 
 .container__input {
-    align-items: center;
+  align-items: center;
 }
 
 #input__calculadora {
-    width: 300px;
-    height: 60px;
-    border: 0px;
-    font-size: 2em;
-    outline: 0px;
+  width: 300px;
+  height: 60px;
+  border: 0px;
+  font-size: 2em;
+  outline: 0px;
 }
 
 .container__operadores {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    user-select: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  user-select: none;
 }
 
 .operadores {
-    height: 70px;
-    width: 60px;
-    background-color: gray;
-    cursor: pointer;
-    text-align: center;
-    border: 0px;
-    padding: 0px;
-    font-size: 50px;
-    align-content: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 70px;
+  width: 60px;
+  background-color: gray;
+  cursor: pointer;
+  text-align: center;
+  border: 0px;
+  padding: 0px;
+  font-size: 50px;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .operadores:hover {
-    background-color: rgb(181, 181, 181);
+  background-color: rgb(181, 181, 181);
 }
 
 .operadores:active {
-    background-color: rgb(77, 76, 76);
+  background-color: rgb(77, 76, 76);
 }
 
 .subtracao {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .multiplicacao {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .container__numeros {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 20px;
-    user-select: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+  user-select: none;
 }
 
 .tecla {
-    background-color: #62A1DB;
-    height: 4em;
-    width: 6.5em;
-    cursor: pointer;
-    border: 0px;
-    display: flex;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+  background-color: #62a1db;
+  height: 4em;
+  width: 6.5em;
+  cursor: pointer;
+  border: 0px;
+  display: flex;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .tecla:hover {
-    background-color: #71baff;
+  background-color: #71baff;
 }
 
 .tecla:active {
-    background-color: #426e96;
+  background-color: #426e96;
 }
 
 .painel__numeros {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .igual {
-    background-color: #5DD469;
-    border: 0px;
-    text-align: center;
+  background-color: #5dd469;
+  border: 0px;
+  text-align: center;
 }
 
 .igual:hover {
-    background-color: #6ffb7d
+  background-color: #6ffb7d;
 }
 
 .igual:active {
-    background-color: #3a8541
+  background-color: #3a8541;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input {
-    background-color: rgba(124, 123, 123, 0.471);
-    text-align: center;
-    font-size: 100%;
-    font-weight: bold;
+  background-color: rgba(124, 123, 123, 0.471);
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
 }
